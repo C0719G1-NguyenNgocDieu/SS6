@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    function setCircle1(ra) {
+        return ra * ra * Math.PI;
+
+    }
+
+    function setCircle2(ra) {
+        return 2 * ra * Math.PI;
+    }
+
+
+    let radia = parseFloat(prompt('Radian: '));
+    let dt = setCircle1(radia);
+    let cv = setCircle2(radia);
+    document.write('Chu vi hinh tron:' + cv);
+    document.write('Dien tich hinh tron: ' + dt);
+
+
+</script>
+</body>
+</html>

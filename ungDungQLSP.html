@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="showProduct(arrName)">
+<style>
+    td {
+        width: 50px;
+    }
+</style>
+
+
+<h2>Add New Product</h2>
+<input id='input' placeholder='New Product'>
+<button onclick='setAddProduct()'>Add</button>
+<p id="name"></p>
+
+<script>
+    let arrName = [];
+
+
+    function showProduct(arr) {
+        let name = '';
+        name += '<table border="4" style="width: 50%">';
+        for (let i = 0; i < arr.length; i++) {
+            name += "<tr>";
+            name += "<td style='width: 5%'>" + (i + 1) + "</td>" + "<td>" + arr[i] + "</td>" + "<td style='width: 10%'>" + "<button onclick='editProduct()' id='" + i +'-edit'+ "' style='width: 100%'>Edit</button>" + "</td>" + "<td style='width: 10%'>" + "<button style='width: 100%' onclick='deleteProduct(this)' id='" + i + "' >Delete</button>"
+                + "</td>" + "</tr>";
+        }
+        name += "</table>";
+        document.getElementById('name').innerHTML = name;
+    }
+
+    function setAddProduct() {
+        let addArr = document.getElementById('input').value;
+        arrName.push(addArr);
+        document.getElementById('input').value = '';
+        showProduct(arrName);
+    }
+
+    function deleteProduct(del) {
+        arrName.splice(del.id[0], 1);
+        showProduct(arrName);
+    }
+
+    function editProduct(edit) {
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input placeholder="Input Value" oninput="main(this.value)"></td>
+        <td>
+            <select id="change">
+                <option value="meter">Feet To Meter</option>
+                <option value="foot">Meter To Feet</option>
+            </select>
+        </td>
+        <td><input placeholder="Result" id="result"></td>
+    </tr>
+</table>
+<script>
+    function footToMeter(foot) {
+        return (0.305 * foot);
+    }
+
+    function meterToFoot(meter) {
+        return (3.279 * meter);
+    }
+
+    function main(number) {
+        let change = document.getElementById('change').value;
+        if (change == "meter") {
+            document.getElementById('result').value = footToMeter(number);
+        } else if (change == "foot") {
+            document.getElementById('result').value = meterToFoot(number);
+        }
+    }
+</script>
+</body>
+</html>

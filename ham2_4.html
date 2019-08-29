@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function testNumber(key) {
+        if (key.keyCode >= 48 && key.keyCode <= 57) {
+            return true;
+        }
+        return false;
+    }
+
+    const inputNum = parseInt(prompt('Nhap: '));
+    if (testNumber(inputNum)) {
+        alert('true');
+    } else alert('false');
+
+</script>
+</body>
+</html>

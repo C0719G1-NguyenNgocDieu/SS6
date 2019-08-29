@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let str2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function starToConstellation(str) {
+        for (let i = 0; i < str1.length; i++) {
+            if (str1[i] === str) {
+                return str2[i];
+            }
+        }
+        return 'False';
+    }
+
+    let inputStar = prompt('Star name: ');
+    document.write(starToConstellation(inputStar));
+
+</script>
+</body>
+</html>
